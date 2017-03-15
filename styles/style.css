@@ -54,14 +54,14 @@ img {
   }
 }
 
-p {
+h1 {
   color: red;
   width: 100px;
   font-size: 40px;
   transform-origin: center;
 }
 
-p:hover {
+h1:hover {
   animation-name: rotate;
   animation-duration: 0.6s;
   animation-timing-function: linear;
