@@ -8,6 +8,7 @@
                                       started with developing web sites and applications.">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/table.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1>Mozilla is cool</h1>
@@ -41,6 +42,48 @@
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto - Here is my link test</a>
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
   <button>Change user</button>
+  
+  <table summary="The most famous UK punk bands">
+  <caption>A summary of the UK's most famous punk bands</caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+       
+      ... some rows removed for brevity
+
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+  
   
   <script src="scripts/main.js"></script>
   </body>
