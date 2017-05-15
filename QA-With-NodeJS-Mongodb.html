@@ -1,0 +1,32 @@
+<html>
+<title> The issues and solutions in NodeJS Mongodb Web Application learning </title>
+<body> 
+
+1. How to solve the issue 'Can't set the header after they are sent' ? 
+Cause: You're sending a response twice via res.end() or res.render(). Get rid of the second one and you should be fine. 
+Also, calling res.end() after res.render() is redundant since res.render() automatically ends the response with the rendered result by default.
+
+Referring link: http://stackoverflow.com/questions/27658997/cant-set-headers-after-they-are-sent-on-express
+
+2. How to upload one or multi files to Mongodb? 
+
+  // Use .any() to upload multi files
+	app.use(multer({ dest: path.join(__dirname, 'public/upload/temp')}).any());
+  
+  //And we need to use the path as below while the post request is sent
+  var tempPath = req.files[0].path;
+	var ext = path.extname(req.files[0].originalname).toLowerCase();
+  
+  //Use  .single() to upload only one file
+  app.use(multer({ dest: path.join(__dirname, 'public/upload/temp')}).single('file'));
+  
+ //And we need to use the path as below while the post request is sent
+ var tempPath = req.files.path;
+ var ext = path.extname(req.files.originalname).toLowerCase();
+ 
+ //We can debug the req by console.log(req)
+ console.log(req)
+ 
+
+</body>
+</html>
